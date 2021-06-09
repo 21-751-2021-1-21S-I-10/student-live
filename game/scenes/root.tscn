@@ -1,0 +1,567 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://style/theme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/HBoxContainer.gd" type="Script" id=2]
+[ext_resource path="res://style/theme — копия.tres" type="Theme" id=3]
+[ext_resource path="res://scripts/root.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Work_box.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Univer_box.gd" type="Script" id=6]
+[ext_resource path="res://scripts/EndButton.gd" type="Script" id=7]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Stats" type="HBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 40.0
+theme = ExtResource( 1 )
+custom_constants/separation = 25
+alignment = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Uspeh" type="Label" parent="Stats"]
+margin_left = 183.0
+margin_top = 2.0
+margin_right = 353.0
+margin_bottom = 38.0
+text = "Успеваемость:"
+
+[node name="Docug" type="Label" parent="Stats"]
+margin_left = 378.0
+margin_top = 2.0
+margin_right = 449.0
+margin_bottom = 38.0
+text = "Досуг:"
+
+[node name="Sitoct" type="Label" parent="Stats"]
+margin_left = 474.0
+margin_top = 2.0
+margin_right = 578.0
+margin_bottom = 38.0
+text = "Сытость:"
+
+[node name="Ustal" type="Label" parent="Stats"]
+margin_left = 603.0
+margin_top = 2.0
+margin_right = 727.0
+margin_bottom = 38.0
+text = "Усталость:"
+
+[node name="Money" type="Label" parent="Stats"]
+margin_left = 752.0
+margin_top = 2.0
+margin_right = 840.0
+margin_bottom = 38.0
+text = "Деньги:"
+
+[node name="Places" type="HBoxContainer" parent="."]
+margin_top = 560.0
+margin_right = 1024.0
+margin_bottom = 600.0
+theme = ExtResource( 3 )
+custom_constants/separation = 100
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Univer" type="Button" parent="Places"]
+margin_left = 14.0
+margin_right = 133.0
+margin_bottom = 40.0
+text = " Университет "
+
+[node name="Work" type="Button" parent="Places"]
+margin_left = 233.0
+margin_right = 350.0
+margin_bottom = 40.0
+text = "     Работа     "
+
+[node name="Shop" type="Button" parent="Places"]
+margin_left = 450.0
+margin_right = 566.0
+margin_bottom = 40.0
+text = "    Магазин    "
+
+[node name="Entertain" type="Button" parent="Places"]
+margin_left = 666.0
+margin_right = 789.0
+margin_bottom = 40.0
+text = " Развлечения "
+
+[node name="Relation" type="Button" parent="Places"]
+margin_left = 889.0
+margin_right = 1009.0
+margin_bottom = 40.0
+text = "  Отношения  "
+
+[node name="Univer_box" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 262.0
+margin_top = 80.0
+margin_right = 762.0
+margin_bottom = 500.0
+theme = ExtResource( 3 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="uni_l" type="VBoxContainer" parent="Univer_box"]
+margin_right = 240.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 240, 0 )
+custom_constants/separation = 50
+alignment = 1
+
+[node name="openedu" type="Button" parent="Univer_box/uni_l"]
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 0, 50 )
+custom_constants/hseparation = 0
+text = "Списать курс на openedu"
+
+[node name="Seminar" type="Button" parent="Univer_box/uni_l"]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 0, 50 )
+text = "Подготовиться к семенару"
+
+[node name="math" type="Button" parent="Univer_box/uni_l"]
+margin_top = 235.0
+margin_right = 240.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 0, 50 )
+text = "Сделать д/з по математике"
+
+[node name="laba" type="Button" parent="Univer_box/uni_l"]
+margin_top = 335.0
+margin_right = 240.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 0, 50 )
+text = "Выполнить лаб.работу"
+
+[node name="uni_r" type="VBoxContainer" parent="Univer_box"]
+margin_left = 244.0
+margin_right = 484.0
+margin_bottom = 420.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="conrolnay" type="Button" parent="Univer_box/uni_r"]
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 240, 50 )
+custom_constants/hseparation = 0
+text = "Подготовиться к к/р"
+
+[node name="teams" type="Button" parent="Univer_box/uni_r"]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 240, 50 )
+toggle_mode = true
+text = "Лекция в Teams"
+
+[node name="para" type="Button" parent="Univer_box/uni_r"]
+margin_top = 235.0
+margin_right = 240.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 240, 50 )
+text = "Сходить на очную пару"
+
+[node name="konspect" type="Button" parent="Univer_box/uni_r"]
+margin_top = 335.0
+margin_right = 240.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 240, 50 )
+text = "Списать конспект"
+
+[node name="Work_box" type="HBoxContainer" parent="."]
+margin_left = 262.0
+margin_top = 80.0
+margin_right = 762.0
+margin_bottom = 500.0
+theme = ExtResource( 3 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Work_l" type="VBoxContainer" parent="Work_box"]
+margin_right = 240.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 240, 0 )
+custom_constants/separation = 50
+alignment = 1
+
+[node name="code" type="Button" parent="Work_box/Work_l"]
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 0, 50 )
+custom_constants/hseparation = 0
+text = "Написать код знакомым"
+
+[node name="homework" type="Button" parent="Work_box/Work_l"]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 0, 50 )
+text = "Сделать чьё-то дз"
+
+[node name="mac" type="Button" parent="Work_box/Work_l"]
+margin_top = 235.0
+margin_right = 240.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 0, 50 )
+text = "Смена в маке"
+
+[node name="garderob" type="Button" parent="Work_box/Work_l"]
+margin_top = 335.0
+margin_right = 240.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 0, 50 )
+text = "Поработать в гардеробе"
+
+[node name="Work_r" type="VBoxContainer" parent="Work_box"]
+margin_left = 244.0
+margin_right = 484.0
+margin_bottom = 420.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="perecup" type="Button" parent="Work_box/Work_r"]
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 240, 50 )
+custom_constants/hseparation = 0
+text = "Побыть перекупом"
+
+[node name="poker" type="Button" parent="Work_box/Work_r"]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 240, 50 )
+toggle_mode = true
+text = "Катнуть турик в покер"
+
+[node name="scam" type="Button" parent="Work_box/Work_r"]
+margin_top = 235.0
+margin_right = 240.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 240, 50 )
+text = "Заскамить мамонта"
+
+[node name="com" type="Button" parent="Work_box/Work_r"]
+margin_top = 335.0
+margin_right = 240.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 240, 50 )
+text = "Поработать в ЦОМе"
+
+[node name="Shop_box" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 262.0
+margin_top = 80.0
+margin_right = 762.0
+margin_bottom = 500.0
+theme = ExtResource( 3 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shop_l" type="VBoxContainer" parent="Shop_box"]
+margin_right = 240.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 240, 0 )
+custom_constants/separation = 50
+alignment = 1
+
+[node name="shoes" type="Button" parent="Shop_box/shop_l"]
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 0, 50 )
+custom_constants/hseparation = 0
+text = "Купить кроссовки(7к)"
+
+[node name="ntk" type="Button" parent="Shop_box/shop_l"]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 0, 50 )
+text = "Купить НТК(1к)"
+
+[node name="hata" type="Button" parent="Shop_box/shop_l"]
+margin_top = 235.0
+margin_right = 240.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 0, 50 )
+text = "Снять квартиру(10к)"
+
+[node name="phone" type="Button" parent="Shop_box/shop_l"]
+margin_top = 335.0
+margin_right = 240.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 0, 50 )
+text = "Купить телефон(100к)"
+
+[node name="shop_r" type="VBoxContainer" parent="Shop_box"]
+margin_left = 244.0
+margin_right = 484.0
+margin_bottom = 420.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="car" type="Button" parent="Shop_box/shop_r"]
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 240, 50 )
+custom_constants/hseparation = 0
+text = "Купить машину(500к)"
+
+[node name="startup" type="Button" parent="Shop_box/shop_r"]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 240, 50 )
+toggle_mode = true
+text = "Вложиться в стартап(50к)"
+
+[node name="food" type="Button" parent="Shop_box/shop_r"]
+margin_top = 235.0
+margin_right = 240.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 240, 50 )
+text = "Купить еды на неделю(2к)"
+
+[node name="uniobed" type="Button" parent="Shop_box/shop_r"]
+margin_top = 335.0
+margin_right = 240.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 240, 50 )
+text = "Пообедать в ВУЗе(200р)"
+
+[node name="Entertain_box" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 262.0
+margin_top = 80.0
+margin_right = 762.0
+margin_bottom = 500.0
+theme = ExtResource( 3 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Entertain_l" type="VBoxContainer" parent="Entertain_box"]
+margin_right = 240.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 240, 0 )
+custom_constants/separation = 50
+alignment = 1
+
+[node name="batlepas" type="Button" parent="Entertain_box/Entertain_l"]
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 0, 50 )
+custom_constants/hseparation = 0
+text = "Купить BattlePass(10к)"
+
+[node name="progul" type="Button" parent="Entertain_box/Entertain_l"]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 0, 50 )
+text = "Сходить на прогулку"
+
+[node name="film" type="Button" parent="Entertain_box/Entertain_l"]
+margin_top = 235.0
+margin_right = 240.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 0, 50 )
+text = "Посмотреть сериал/фильм"
+
+[node name="ivent" type="Button" parent="Entertain_box/Entertain_l"]
+margin_top = 335.0
+margin_right = 240.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 0, 50 )
+text = "Ивент в унике"
+
+[node name="Entertain_r" type="VBoxContainer" parent="Entertain_box"]
+margin_left = 244.0
+margin_right = 484.0
+margin_bottom = 420.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="show" type="Button" parent="Entertain_box/Entertain_r"]
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 240, 50 )
+custom_constants/hseparation = 0
+text = "Сходить на концерт(2к)"
+
+[node name="bar" type="Button" parent="Entertain_box/Entertain_r"]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 240, 50 )
+toggle_mode = true
+text = "Сходить в бар(1к)"
+
+[node name="youtube" type="Button" parent="Entertain_box/Entertain_r"]
+margin_top = 235.0
+margin_right = 240.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 240, 50 )
+text = "Глянуть Twitch/YouTube"
+
+[node name="katochka" type="Button" parent="Entertain_box/Entertain_r"]
+margin_top = 335.0
+margin_right = 240.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 240, 50 )
+text = "Катнуть каточку"
+
+[node name="Relation_box" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 262.0
+margin_top = 80.0
+margin_right = 762.0
+margin_bottom = 500.0
+theme = ExtResource( 3 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rel_l" type="VBoxContainer" parent="Relation_box"]
+margin_right = 240.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 240, 0 )
+custom_constants/separation = 50
+alignment = 1
+
+[node name="tinder" type="Button" parent="Relation_box/rel_l"]
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 0, 50 )
+custom_constants/hseparation = 0
+text = "Tinder Gold(500р)"
+
+[node name="cooldate" type="Button" parent="Relation_box/rel_l"]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 0, 50 )
+text = "Крутое свидание(5к)"
+
+[node name="simpledate" type="Button" parent="Relation_box/rel_l"]
+margin_top = 235.0
+margin_right = 240.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 0, 50 )
+text = "Обычное свидание(2к)"
+
+[node name="race" type="Button" parent="Relation_box/rel_l"]
+margin_top = 335.0
+margin_right = 240.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 0, 50 )
+text = "Посмотреть гоночки"
+
+[node name="rel_r" type="VBoxContainer" parent="Relation_box"]
+margin_left = 244.0
+margin_right = 484.0
+margin_bottom = 420.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="friends" type="Button" parent="Relation_box/rel_r"]
+margin_top = 35.0
+margin_right = 240.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 240, 50 )
+custom_constants/hseparation = 0
+text = "Написать старым друзьям"
+
+[node name="birthday" type="Button" parent="Relation_box/rel_r"]
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 240, 50 )
+toggle_mode = true
+text = "Поздравить друга с др(1к)"
+
+[node name="inedrug" type="Button" parent="Relation_box/rel_r"]
+margin_top = 235.0
+margin_right = 240.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 240, 50 )
+text = "Найти собеседника в инете"
+
+[node name="parents" type="Button" parent="Relation_box/rel_r"]
+margin_top = 335.0
+margin_right = 240.0
+margin_bottom = 385.0
+rect_min_size = Vector2( 240, 50 )
+text = "Съездить к родителям"
+
+[node name="EndButton" type="Button" parent="."]
+visible = false
+margin_left = 400.0
+margin_top = 150.0
+margin_right = 700.0
+margin_bottom = 450.0
+theme = ExtResource( 3 )
+text = "Конец игры"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene_to_open = "res://scenes/menu.tscn"
+
+[connection signal="pressed" from="Places/Univer" to="." method="_on_Univer_pressed"]
+[connection signal="pressed" from="Places/Work" to="." method="_on_Work_pressed"]
+[connection signal="pressed" from="Places/Shop" to="." method="_on_Shop_pressed"]
+[connection signal="pressed" from="Places/Entertain" to="." method="_on_Entertain_pressed"]
+[connection signal="pressed" from="Places/Relation" to="." method="_on_Relation_pressed"]
+[connection signal="pressed" from="Univer_box/uni_l/openedu" to="Stats" method="_on_openedu_pressed"]
+[connection signal="pressed" from="Univer_box/uni_l/Seminar" to="Stats" method="_on_Seminar_pressed"]
+[connection signal="pressed" from="Univer_box/uni_l/math" to="Stats" method="_on_math_pressed"]
+[connection signal="pressed" from="Univer_box/uni_l/laba" to="Stats" method="_on_laba_pressed"]
+[connection signal="pressed" from="Univer_box/uni_r/conrolnay" to="Stats" method="_on_conrolnay_pressed"]
+[connection signal="pressed" from="Univer_box/uni_r/teams" to="Stats" method="_on_teams_pressed"]
+[connection signal="pressed" from="Univer_box/uni_r/para" to="Stats" method="_on_para_pressed"]
+[connection signal="pressed" from="Univer_box/uni_r/konspect" to="Stats" method="_on_konspect_pressed"]
+[connection signal="pressed" from="Work_box/Work_l/code" to="Stats" method="_on_code_pressed"]
+[connection signal="pressed" from="Work_box/Work_l/homework" to="Stats" method="_on_homework_pressed"]
+[connection signal="pressed" from="Work_box/Work_l/mac" to="Stats" method="_on_mac_pressed"]
+[connection signal="pressed" from="Work_box/Work_l/garderob" to="Stats" method="_on_garderob_pressed"]
+[connection signal="pressed" from="Work_box/Work_r/perecup" to="Stats" method="_on_perecup_pressed"]
+[connection signal="pressed" from="Work_box/Work_r/poker" to="Stats" method="_on_poker_pressed"]
+[connection signal="pressed" from="Work_box/Work_r/scam" to="Stats" method="_on_scam_pressed"]
+[connection signal="pressed" from="Work_box/Work_r/com" to="Stats" method="_on_com_pressed"]
+[connection signal="pressed" from="Shop_box/shop_l/shoes" to="Stats" method="_on_shoes_pressed"]
+[connection signal="pressed" from="Shop_box/shop_l/ntk" to="Stats" method="_on_ntk_pressed"]
+[connection signal="pressed" from="Shop_box/shop_l/hata" to="Stats" method="_on_hata_pressed"]
+[connection signal="pressed" from="Shop_box/shop_l/phone" to="Stats" method="_on_phone_pressed"]
+[connection signal="pressed" from="Shop_box/shop_r/car" to="Stats" method="_on_car_pressed"]
+[connection signal="pressed" from="Shop_box/shop_r/startup" to="Stats" method="_on_startup_pressed"]
+[connection signal="pressed" from="Shop_box/shop_r/food" to="Stats" method="_on_food_pressed"]
+[connection signal="pressed" from="Shop_box/shop_r/uniobed" to="Stats" method="_on_uniobed_pressed"]

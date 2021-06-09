@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://style/theme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/Container_parametr.gd" type="Script" id=2]
+[ext_resource path="res://style/dynamicfont.tres" type="DynamicFont" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.36737
+margin_top = -1.12242
+margin_right = -3.36737
+margin_bottom = -1.12244
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="Container" parent="."]
+margin_right = 1031.0
+margin_bottom = 55.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Container"]
+margin_left = 677.967
+margin_top = 3.36739
+margin_right = 882.967
+margin_bottom = 53.0818
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = ExtResource( 3 )
+text = "Деньги 2550"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Container"]
+margin_left = 883.735
+margin_top = 7.0
+margin_right = 1085.74
+margin_bottom = 46.0
+theme = ExtResource( 1 )
+text = "Досуг 40"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Container"]
+margin_left = 279.616
+margin_top = 4.3674
+margin_right = 483.616
+margin_bottom = 40.3674
+theme = ExtResource( 1 )
+text = "Сытость 57"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Container"]
+margin_left = 464.822
+margin_top = 4.3674
+margin_right = 668.822
+margin_bottom = 40.3674
+theme = ExtResource( 1 )
+text = "Усталость 23"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Container"]
+margin_left = 13.4695
+margin_top = 2.24492
+margin_right = 260.47
+margin_bottom = 51.9594
+theme = ExtResource( 1 )
+text = "Успеваемость 79"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
